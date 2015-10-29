@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+    <item android:id="@+id/developer"
+        app:showAsAction="never"
+        android:title="@string/developer">
+    </item>
+
+    <item android:id="@+id/appname"
+        android:title="@string/appname"
+        android:orderInCategory="100"
+        app:showAsAction="never">
+    </item>
+    <item android:id="@+id/price"
+        android:title="@string/price"
+        android:orderInCategory="100"
+        app:showAsAction="never">
+    </item>
+    <item android:id="@+id/clearhistory"
+        android:title="@string/clearhistory"
+        android:orderInCategory="100"
+        app:showAsAction="never">
+    </item>
+</menu>

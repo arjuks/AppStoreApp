@@ -1,0 +1,42 @@
+package com.example.arjun.midtermexample;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    static final String CODE="code";
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button applist = (Button) findViewById(R.id.AppList);
+        Button history = (Button) findViewById(R.id.History);
+
+        applist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,AppsActivity.class);
+                intent.putExtra(CODE,111);
+                startActivity(intent);
+            }
+        });
+
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,AppsActivity.class);
+                intent.putExtra(CODE,222);
+                startActivity(intent);
+            }
+        });
+    }
+}
